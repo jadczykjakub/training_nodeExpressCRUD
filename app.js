@@ -2,7 +2,7 @@ const { render } = require('ejs');
 const mongoose = require('mongoose');
 const express = require('express');
 const blogRoutes = require('./routes/blogRoutes');
-require('dotenv').config()
+require('dotenv').config();
 
 //connect to mongodb
 const dbURI = 'mongodb+srv://training:test1234@nodetraining.s2yaa9r.mongodb.net/?retryWrites=true&w=majority'
@@ -34,3 +34,5 @@ app.use('/blogs' ,blogRoutes);
 app.use((req, res) => {
     res.render('404', {title: '404'});
 })
+
+module.exports = app;
