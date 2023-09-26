@@ -2,6 +2,7 @@ const { render } = require('ejs');
 const mongoose = require('mongoose');
 const express = require('express');
 const blogRoutes = require('./routes/blogRoutes');
+require('dotenv').config()
 
 //connect to mongodb
 const dbURI = 'mongodb+srv://training:test1234@nodetraining.s2yaa9r.mongodb.net/?retryWrites=true&w=majority'
